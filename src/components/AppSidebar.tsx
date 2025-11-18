@@ -1,5 +1,10 @@
-import { LayoutDashboard, Users, FolderKanban, CheckSquare } from 'lucide-react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import {
+  LayoutDashboard,
+  Users,
+  FolderKanban,
+  CheckSquare,
+} from "lucide-react";
+import { useLocation, useNavigate } from "react-router-dom";
 import {
   Sidebar,
   SidebarContent,
@@ -10,20 +15,20 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from '@/components/ui/sidebar';
+} from "@/components/ui/sidebar";
 
 const navItems = [
-  { path: '/', icon: LayoutDashboard, label: 'Dashboard' },
-  { path: '/teams', icon: Users, label: 'Teams' },
-  { path: '/projects', icon: FolderKanban, label: 'Projects' },
-  { path: '/tasks', icon: CheckSquare, label: 'Tasks' },
+  { path: "/", icon: LayoutDashboard, label: "Dashboard" },
+  { path: "/teams", icon: Users, label: "Teams" },
+  { path: "/projects", icon: FolderKanban, label: "Projects" },
+  { path: "/tasks", icon: CheckSquare, label: "Tasks" },
 ];
 
 export function AppSidebar() {
   const { state } = useSidebar();
   const location = useLocation();
   const navigate = useNavigate();
-  const collapsed = state === 'collapsed';
+  const collapsed = state === "collapsed";
 
   return (
     <Sidebar collapsible="icon">
@@ -32,9 +37,10 @@ export function AppSidebar() {
           <SidebarGroupLabel>Smart Worker</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {navItems.map((item) => {
+              {navItems.map(item => {
                 const Icon = item.icon;
                 const isActive = location.pathname === item.path;
+
                 return (
                   <SidebarMenuItem key={item.path}>
                     <SidebarMenuButton
