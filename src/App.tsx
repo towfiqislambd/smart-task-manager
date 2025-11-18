@@ -10,7 +10,6 @@ import Teams from "./pages/Teams";
 import Projects from "./pages/Projects";
 import Tasks from "./pages/Tasks";
 import NotFound from "./pages/NotFound";
-
 const queryClient = new QueryClient();
 
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
