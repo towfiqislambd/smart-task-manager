@@ -44,7 +44,7 @@ const Login = () => {
       <Card className="w-full max-w-md">
         <CardHeader className="space-y-1">
           <CardTitle className="text-3xl font-bold text-center">
-            TaskFlow
+            Smart Work
           </CardTitle>
           <CardDescription className="text-center">
             {isLogin ? 'Sign in to your account' : 'Create a new account'}
