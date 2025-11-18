@@ -146,6 +146,7 @@ const Tasks = () => {
                 Create Task
               </Button>
             </DialogTrigger>
+
             <DialogContent className="max-w-2xl">
               <DialogHeader>
                 <DialogTitle>{editingTask ? 'Edit Task' : 'Create New Task'}</DialogTitle>
@@ -168,6 +169,7 @@ const Tasks = () => {
                     rows={3}
                   />
                 </div>
+
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label>Project *</Label>
@@ -205,6 +207,7 @@ const Tasks = () => {
                   </div>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
+                  
                   <div className="space-y-2">
                     <Label>Priority</Label>
                     <Select value={priority} onValueChange={(val: any) => setPriority(val)}>
