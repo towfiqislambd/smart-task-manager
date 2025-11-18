@@ -174,7 +174,6 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
             .slice(0, overloadCount);
 
           tasksToReassign.forEach(task => {
-            // Calculate current task counts using updatedTasks instead of state
             const availableMembers = team.members
               .filter(m => {
                 if (m.id === member.id) return false;
